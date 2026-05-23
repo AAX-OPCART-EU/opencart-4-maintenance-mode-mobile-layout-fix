@@ -3,9 +3,7 @@
 ## 🐛 The Problem
 In the default installation of OpenCart 4 (and 4.1+), turning on "Maintenance Mode" results in a critical layout failure, especially visible on mobile devices. The footer completely overlaps and hides the header and the maintenance message, making the page look unprofessionally broken.
 
-<img width="1080" height="2280" alt="opencart-4-maintenance-mode-fixed-mobile png" src="https://github.com/user-attachments/assets/bdbb50ee-3594-44f9-b161-b186da0f0ee7" />
-<img width="1080" height="2280" alt="opencart-4-maintenance-mode-fixed-mobile png" src="https://github.com/user-attachments/assets/917d53cd-830e-46c0-989c-522feba0b73c" />
-<img width="1080" height="2280" alt="opencart-4-maintenance-mode-broken-mobile png" src="https://github.com/user-attachments/assets/3fcce413-0850-4f41-9b47-96ee841bc775" />
+<img width="300" alt="opencart-4-maintenance-mode-broken-mobile png" src="https://github.com/user-attachments/assets/3fcce413-0850-4f41-9b47-96ee841bc775" />
 
 This happens because the default template file is missing the core `<div id="content">` HTML wrapper. Without it, the default CSS framework cannot maintain the page grid, causing elements to collapse onto each other.
 
@@ -31,16 +29,13 @@ To fix this, simply wrap the maintenance message in the correct `#content` div.
 <div id="content">
   <div id="common-maintenance" class="container">
     <div class="row">
-      <div class="col-12">
-        {{ message }}
-      </div>
+      <div class="col-12">{{ message }}</div>
     </div>
   </div>
 </div>
 {{ footer }}
 ```
-
-<img width="1080" height="2280" alt="opencart-4-maintenance-mode-fixed-mobile png" src="https://github.com/user-attachments/assets/49f4354d-f15b-473d-b64c-275aa8514f86" />
+<img width="300" alt="opencart-4-maintenance-mode-fixed-mobile png" src="https://github.com/user-attachments/assets/bdbb50ee-3594-44f9-b161-b186da0f0ee7" />
 
 ## 🤝 Partnership for OpenCart Developers
 
