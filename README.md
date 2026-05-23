@@ -1,7 +1,7 @@
 # OpenCart 4.1+ Maintenance Mode Mobile Layout Fix
 
 ## 🐛 The Problem
-In the default installation of OpenCart 4 (and 4.1+), turning on "Maintenance Mode" results in a critical layout failure, especially visible on mobile devices. The footer completely overlaps and hides the header and the maintenance message, making the page look unprofessionally broken.
+In the default installation of OpenCart 4 (and 4.1+), turning on "Maintenance Mode" results in a critical layout failure on mobile devices. The footer completely overlaps and hides the header and the maintenance message, making the page look unprofessionally broken.
 
 <img width="300" alt="opencart-4-maintenance-mode-broken-mobile png" src="https://github.com/user-attachments/assets/3fcce413-0850-4f41-9b47-96ee841bc775" />
 
